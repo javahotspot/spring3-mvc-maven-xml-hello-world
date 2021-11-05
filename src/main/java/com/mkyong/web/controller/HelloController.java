@@ -29,5 +29,16 @@ public class HelloController {
 		return model;
 
 	}
+	
+	@RequestMapping(value = "/{save}", method = RequestMethod.GET)
+	public ModelAndView save(@PathVariable("name") String name) {
+
+		ModelAndView model = new ModelAndView();
+		model.setViewName("hello by Jenkins.....!!!");
+		model.addObject("msg", name);
+
+		return model;
+
+	}
 
 }
